@@ -1,0 +1,267 @@
+*{
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+}
+.img {          
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./image.png);
+    position: relative;
+    background-repeat: no-repeat;
+}
+.flex{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    background-color: transparent;
+    height: 120px;
+    margin: auto;
+    margin-left: 10vw;
+}
+.box{
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+}
+.column {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+.first1{
+    background-color: transparent;
+    font-size: 50px;
+    color: red;
+    font-weight: 900;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.first2{
+    background-color: transparent;
+}
+.first2 select {
+    color: aliceblue;
+    border-radius: 8px;
+    height: 45px;
+    margin-right: 8px;
+    border: none;
+}
+.first2 button{
+    color: aliceblue;
+    background-color: red;
+    border-radius: 8px;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+    height: 45px;
+    padding:0px 12px;
+    border: none;
+
+}
+.second1{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 65px;
+    font-weight: 2500;
+    text-align: center;
+    background-color: transparent;
+    justify-content: center;
+}
+.second2{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    background-color: transparent;margin: 2vw;
+}
+.second3{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    background-color: transparent;
+}
+.second4{
+    background-color: transparent;
+    margin-top: 4vw;
+}
+.second4 input{
+    opacity: 0.8;
+    border-radius: 4px;
+    margin: 15px;
+    height: 60px;
+    border: 1px solid whitesmoke;
+    width: 330px;
+    font-size: 20px;
+    color: white;
+}
+.second4 button{
+    border-radius: 6px;
+    border: none;
+    height: 60px;
+    width: 180px;
+    color: white;
+    background-color: red;
+    font-weight: 600;
+    font-size: 15px;
+}
+.line{
+    height: 6px;
+    background-color: red;
+    box-shadow: 80px;
+}
+.trending{
+    font-family: 'Poppins',sans-serif;
+    font-size: 35px;
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.img3{
+    background-image: url(./netflix\ img1.jpg);
+    height: 260px;
+    width: 200px;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 30px;
+    margin: 12px 20px;
+    object-fit: fill;
+    flex-wrap: wrap;
+}
+.img2{
+    background-image: url(./classproject.jpeg);
+    height: 260px;
+    width: 200px;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 30px;
+    margin: 12px 20px;
+    object-fit: fill;
+    flex-wrap: wrap;
+}
+.img1{
+    background-image: url(./nitflix\ img2.avif);
+    height: 260px;
+    width: 200px;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 30px;
+    margin: 12px 20px;
+    object-fit: fill;
+    flex-wrap: wrap;
+}
+.scroll{
+    display: flex;
+    overflow: scroll;
+ 
+}
+.grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 400px;
+    color: white;
+}
+.gridone{
+    border-radius: 12px;
+    background-color: rgb(46, 4, 82);
+    object-fit: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+    opacity: 0.8;
+    position: relative;
+}
+.heading{
+    font-size: 30px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    background-color: transparent;
+    margin: 20px;
+    height: 55px;
+}
+.para{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: transparent;
+    color: antiquewhite;
+    position: absolute;
+    bottom: 70px;
+    left: 2px;
+}
+.contact{
+    color: whitesmoke;
+    font-family: 'Poppins',sans-serif;
+}
+.unline{
+    text-decoration: underline;
+}
+.foot{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+}
+.second1{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px;
+    font-size: 20px;
+}
+.second1 a{
+    color: white;
+    margin: 8px 0px;
+}
+@media screen and (max-width:550px) {
+        .second4{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid1{
+            display: grid;
+            grid-template-columns: 1fr ;
+        }
+        .heading{
+            font-size: 22px;
+        }
+        .para{
+            font-size: 12px;
+        }
+    }
+@media  screen and (max-width: 600px){
+    .second1{
+        font-size: 45px;
+    }
+    .first2{
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .flex{
+        max-width: 100vw;
+        margin: 0;
+        padding: 0;
+        justify-content: space-around;
+        
+    }
+    .grid1{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .heading{
+        font-size: 22px;
+    }
+    .para{
+        font-size: 12px;
+    }
+}

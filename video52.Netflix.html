@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 🅽🅴🆃</title>
+    <link rel="stylesheet" href="Netflix.css">
+    <script>
+        // JavaScript function to validate email
+        function validateEmail() {
+            var email = document.getElementById("email").value;
+            var pattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;  // Regex for email validation
+
+            if (!pattern.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;  // Prevent form submission if the email is invalid
+            } else {
+                alert("Email is valid! Proceeding with registration.");
+                document.getElementById("email").value = ''; // Reset the email field
+                return true;
+            }
+        }
+
+        // Function to handle smooth scroll to specific sections of the page
+        function smoothScroll(target) {
+            document.querySelector(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Function to change language selection
+        function changeLanguage() {
+            var language = document.getElementById("languageSelect").value;
+            var message = document.getElementById("languageMessage");
+
+            if (language === "English") {
+                message.textContent = "Ready to watch? Enter your email to create or restart your membership.";
+            } else if (language === "Hindi") {
+                message.textContent = "देखने के लिए तैयार? सदस्यता बनाने या फिर से शुरू करने के लिए अपना ईमेल दर्ज करें।";
+            }
+        }
+
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Function to handle clicks on img1, img2, and img3 (can link to a new page or section)
+        function handleImgClick(imgNum) {
+            if (imgNum === 1) {
+                alert("Image 1 clicked: This could link to more information or a new section.");
+                // Here you could replace this with any page redirection or action
+                // window.location.href = "https://example.com"; // Example of redirection
+                // Or smooth scroll to a section
+                smoothScroll('.grid1'); // Example: scroll to a section
+            } else if (imgNum === 2) {
+                alert("Image 2 clicked: This could link to more information or a new section.");
+                smoothScroll('.contact'); // Scroll to contact section
+            } else if (imgNum === 3) {
+                alert("Image 3 clicked: This could link to more information or a new section.");
+                smoothScroll('.foot'); // Scroll to the footer section
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="image">
+        <div class="img">
+            <div class="box"></div>
+            <div class="flex">
+                <div class="first1">Movie4U</div>
+                <div class="first2">
+                    <select id="languageSelect" name="Language" onchange="changeLanguage()">
+                        <option value="English">解 English</option>
+                        <option value="Hindi">अ Hindi</option>
+                    </select>
+                    <button onclick="smoothScroll('.column')">Sign In</button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="second1"><b class="second1">Unlimited movies,</b></div>
+                <div class="second1"><b class="second1">TV shows and more</b></div>
+                <div class="second2">Starts at ₹249. Cancel at any time.</div>
+                <div id="languageMessage" class="second3">Ready to watch? Enter your email to create or restart your membership.</div>
+                <div class="second4">
+                    <input type="text" id="email" placeholder="   Email Address">
+                    <button onclick="return validateEmail()">GET STARTED ></button>
+                </div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="trending">Trending Now</div>
+        <div class="scroll">
+            <nav class="img1" onclick="handleImgClick(1)">𝟙</nav>
+            <nav class="img2" onclick="handleImgClick(2)">2</nav>
+            <nav class="img3" onclick="handleImgClick(3)">3</nav>
+        </div>
+        <div class="trending">More Reason to join</div>
+        <div class="grid1">
+            <div class="gridone">
+                <div class="heading">Enjoy on your TV</div>
+                <div class="para">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</div>
+            </div>
+            <div class="gridone">
+                <div class="heading">Download your shows to watch offline</div>
+                <div class="para">Save your favourites easily and always have something to watch.</div>
+            </div>
+            <div class="gridone">
+                <div class="heading">Watch everywhere</div>
+                <div class="para">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
+            </div>
+            <div class="gridone">
+                <div class="heading">Create profiles for kids</div>
+                <div class="para">Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</div>
+            </div>
+        </div>
+        <div class="contact"><span>Questions? Call</span> <span class="unline">000-800-919-1694</span></div>
+        <footer class="foot">
+            <div class="second1">
+                <a href="https://www.faq.com" onclick="smoothScroll('#faq')">FAQ</a>
+                <a href="https://www.Help.com" onclick="smoothScroll('#help')">Help Centre</a>
+                <a href="https://www.Account.com" onclick="smoothScroll('#account')">Account</a>
+                <a href="https://www.media center.com" onclick="smoothScroll('#media')">Media Centre</a>
+            </div>
+            <div class="second1">
+                <a href="https://www.Investor.com" onclick="smoothScroll('#investor')">Investor Relations</a>
+                <a href="https://www.Jobs.com" onclick="smoothScroll('#jobs')">Jobs</a>
+                <a href="https://www.watch movie.com" onclick="smoothScroll('#ways-to-watch')">Ways to Watch</a>
+                <a href="Conditions" onclick="smoothScroll('#terms')">Terms of Use</a>
+            </div>
+            <div class="second1">
+                <a href="Contact us" onclick="smoothScroll('#contact')">Contact Us</a>
+                <a href="https://www.Speed test.com" onclick="smoothScroll('#speed-test')">Speed Test</a>
+                <a href="https://www.legal notice.com" onclick="smoothScroll('#legal')">Legal Notices</a>
+                <a href="Premium" onclick="smoothScroll('#premium')">Only on Netflix</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
